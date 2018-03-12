@@ -1,0 +1,58 @@
+5
+##start
+r_s 23 3
+r_1 16 7
+r_2 16 3
+r_3 24 12
+r_4 7 19
+r_5 16 5
+r_6 9 3
+r_7 1 5
+##end
+r_e 9 5
+r_s-r_1
+#r_s-r_3
+r_1-r_2
+r_2-r_3
+r_2-r_4
+r_3-r_6
+r_3-r_4
+r_4-r_5
+r_5-r_7
+r_5-r_6
+r_6-r_7
+r_e-r_7
+##break
+
+
+
+//void    recursion(t_farm *farm, t_way *way, t_rooms *path, t_rooms *rooms, int id)
+//{
+//    t_way       *w;
+//    t_connect   *b;
+//
+////    w = way;                //restart way
+////    while (w)
+////    {
+////        if (ft_strcmp(path->link->connect->name, w->name->name) != 0 || (ft_strcmp(path->name, w->name->name) != 0))
+////        {
+////            b = path->link;         //links
+////            break ;
+////        }
+////        w = w->next_moove;
+////    }
+//    w = way;
+//    while (b != NULL)
+//    {
+//        if (b->connect->id > (id + 1) || b->connect->id == 0)
+//            b->connect->id = id + 1;                                //назначение id комнаты на пути
+//        if (b->connect->id == id + 1)                               //зашли в эту комнату
+//        {
+//            if (save_way(farm, rooms, b->connect, w) == 0)          //сохранили этот шаг в фарм
+//                recursion(farm, w, b->connect, rooms, id + 1);      //пошли дальше
+//            return_step(w, id + 1);
+//        }
+//        b = b->next_con;
+//    }
+//}
+//
